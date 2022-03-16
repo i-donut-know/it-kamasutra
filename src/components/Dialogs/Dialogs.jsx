@@ -2,7 +2,7 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
 
-const DialogItem = (name, id) => {
+const DialogItem = ({ name, id }) => {
   let path = "/dialogs/" + id;
 
   return (
@@ -12,7 +12,7 @@ const DialogItem = (name, id) => {
   );
 };
 
-const Message = (messageText) => {
+const Message = ({ messageText }) => {
   return <div className={s.message}>{messageText}</div>;
 };
 

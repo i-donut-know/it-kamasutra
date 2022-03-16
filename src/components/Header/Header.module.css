@@ -1,8 +1,9 @@
 .header {
   grid-area: h;
   background-color: rgb(253, 32, 187);
+  padding: 10px;
 }
 
 .header img {
-  width: 20px;
+  height: 60px;
 }
