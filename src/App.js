@@ -7,7 +7,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import NotFound from "./components/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -24,8 +24,14 @@ const App = () => {
                 />
               }
             />
-            <Route path="/dialogs" element={<Dialogs />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/dialogs"
+              element={<Dialogs state={props.state.dialogsPage} />}
+            />
+            <Route
+              path="/profile"
+              element={<Profile state={props.state.profilePage} />}
+            />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </div>
